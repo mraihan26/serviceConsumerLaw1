@@ -18,8 +18,10 @@
       <p>Address : <%= user.address %></p>
       <p>Date of Birth : <%= user.dob %></p>
       <p>Gender : <%= user.gender %></p>
+      <a href="/user/<%= user.id %>"><button type="button" class="btn btn-primary"> Details </button></a>
     <% }); %>
     <p>================================</p>
+    <a href="/create-user"><button type="button" class="btn btn-primary"> Create User Here </button></a>
 </body>
 
 </html>
