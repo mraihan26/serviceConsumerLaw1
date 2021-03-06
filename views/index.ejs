@@ -4,15 +4,22 @@
 <head>
   <%- include('./partial/head'); %>
 </head>
-<header>
-  <%- include('./partial/header'); %>
-</header>
 
-<main>
-  <div class="jumbotron">
-    <h1>This is <%= title %></h1>
-    <p>Welcome to templating using EJS</p>
-  </div>
-  </body>
+<body>
+
+  <main>
+    <div class="jumbotron">
+      <h1>Dummy Library Service Consumer</h1>
+      <p>Here is the list of our user!</p>
+    </div>
+    <% users.forEach(function(user) { %>
+      <p>================================</p>
+      <p>Name : <%= user.name %></p>
+      <p>Address : <%= user.address %></p>
+      <p>Date of Birth : <%= user.dob %></p>
+      <p>Gender : <%= user.gender %></p>
+    <% }); %>
+    <p>================================</p>
+</body>
 
 </html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <%- include('./partial/head'); %>
+</head>
+
+<body>
+
+    <main>
+        <div class="jumbotron">
+            <h1>
+                <%= user.name %>
+            </h1>
+            <p>Here is the details of <%= user.name %>!</p>
+        </div>
+        <p>Name : <%= user.name %>
+        </p>
+        <p>Address : <%= user.address %>
+        </p>
+        <p>Date of Birth : <%= user.dob %>
+        </p>
+        <p>Gender : <%= user.gender %>
+        </p>
+        <p>Fine : <%= user.fine %>
+        </p>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Book ID</th>
+                    <th scope="col">Book Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% user.books.forEach(function(book) { %>
+                    <tr>
+                        <td>
+                            <%= book.bookId %>
+                        </td>
+                        <td>
+                            <%= book.bookName %>
+                        </td>
+                    </tr>
+                    <% }); %>
+            </tbody>
+        </table>
+
+</body>
+
+</html>
