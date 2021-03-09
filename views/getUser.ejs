@@ -24,7 +24,7 @@
         </p>
         <p>Fine : <%= user.fine %>
         </p>
-        <a href="/delete-user/<%= user.id %>"><button type="button" class="btn btn-danger"> Delete this User </button></a>
+        <a href="/update-user/<%= user.id %>"><button type="button" class="btn btn-primary"> Update User </button></a><a href="/delete-user/<%= user.id %>"><button type="button" class="btn btn-danger"> Delete this User </button></a>
         <table class="table">
             <thead>
                 <tr>
@@ -45,6 +45,7 @@
                     <% }); %>
             </tbody>
         </table>
+        <a href="/add-books/<%= user.id %>"><button type="button" class="btn btn-primary"> Add Books </button></a>
 
 </body>
 
